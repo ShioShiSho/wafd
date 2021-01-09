@@ -1,0 +1,2 @@
+scoreboard objectives remove Lobby
+function wafd:lobby_setup
