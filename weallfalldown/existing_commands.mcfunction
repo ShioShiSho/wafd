@@ -44,3 +44,38 @@ execute as @a[gamemode=adventure, <within staging volume>]
 
 # Gamestates: 0 - setup, 1 - lobby, 2 - transitional setup, 3 - Main game loop, 
 # on game state 3, start round_timer 
+
+Ring numbers:
+
+0: Starting
+1: 225 - cut off spawn islands, no man's land available
+2: 180 - main islands available, bridges to centre are not
+3: 75 - centre island available only
+4: 20 - only inside castle
+4-2: wither+blindness starts on lower levels
+5: 5 - tiny area within castle
+6: 1 - final ring
+
+Outer edge of NML r=112, height = 80
+
+Timings:
+
+0-10s - spawn area + NML
+
+10s-1min - NML only
+
+1-2min - NML + islands
+
+2-4min - Islands only
+
+4-5min - islands + centre
+
+5-5min30s centre island only
+
+5min30s-6min castle only
+
+6min-6min10s - Wither on lower floor
+
+6min20s-6min30s- closing to worldborder 5
+
+6min40-6min45 closing to worldborder 1
