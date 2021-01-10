@@ -1,2 +1,0 @@
-scoreboard objectives remove Lobby
-function wafd:0_lobby_setup

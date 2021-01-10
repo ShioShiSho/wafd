@@ -1,0 +1,1 @@
+teleport @e[type=minecraft:item, distance=..3] @e[type=minecraft:armor_stand, sort=nearest, limit=1]
