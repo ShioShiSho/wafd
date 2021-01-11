@@ -1,1 +1,1 @@
-tag @e[type=minecraft:armor_stand, x=-15, z=-15, x=30, z=30, y=110, dy=2] add available_for_item_spawn
+tag @e[type=minecraft:armor_stand, x=-15, dx=30, y=110, dy=2, z=-15, dz=30] add available_for_item_spawn
