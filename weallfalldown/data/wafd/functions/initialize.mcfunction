@@ -15,11 +15,16 @@ gamerule spawnRadius 0
 gamerule keepInventory false
 
 # spawnpoint
+
 setworldspawn 2 116 0
 spawnpoint @a 2 116 0
 teleport @a 2 116 0
 
 # Gamemode
+
+# Clear inventories
+
+clear @a
 
 gamemode adventure @a
 

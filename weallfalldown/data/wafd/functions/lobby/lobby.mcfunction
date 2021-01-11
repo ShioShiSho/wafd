@@ -13,6 +13,10 @@ scoreboard players operation #Active_players_copy Lobby = Active_players Lobby
 
 execute store result score Ready Lobby run scoreboard players operation #Active_players_copy Lobby -= Not_ready Lobby
 
+# Exit condition if all players ready
+
+execute if score Ready Lobby = Active_players Lobby run execute if score Active_players Lobby >= Minimum_to_start Lobby run scoreboard players set game_state game_data 1
+
 # Do teleports between lobby and staging
 
 # Teleport to staging if less than 16 players
@@ -28,8 +32,6 @@ execute as @a[x=0, dx=1, y=121, dy=0.5, z=0, dz=1, gamemode=adventure] run telep
 
 execute if score Active_players Lobby matches 17.. run function wafd:lobby/max_players_exceeded
 
-# Exit condition if all players ready
 
-execute if score Ready Lobby = Active_players Lobby if score Active_players Lobby >= Minimum_players Lobby run scoreboard players set game_state game_data 1
 
 

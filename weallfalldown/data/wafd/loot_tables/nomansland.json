@@ -63,7 +63,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:2,Duration:100},{Id:6}],display:{Name:\"\\\"Splash Potion of Slowness I\\\"\"}}"
+              "tag": "{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:2,Duration:100}],display:{Name:\"\\\"Splash Potion of Slowness I\\\"\"}}"
             }
           ]
         },

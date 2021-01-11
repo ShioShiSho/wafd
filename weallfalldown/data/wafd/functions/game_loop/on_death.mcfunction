@@ -1,8 +1,8 @@
 scoreboard players set @s isPlaying 0
 gamemode spectator @s
 
-function wafd:teleport_items
+function wafd:game_loop/teleport_items
 
-function wafd:create_firework
+function wafd:game_loop/create_firework
 
-scoreboard players remove players_remaining game_data 1
+scoreboard players set @s deaths 0

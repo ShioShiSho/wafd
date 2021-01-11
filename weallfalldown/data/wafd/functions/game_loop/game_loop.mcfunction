@@ -1,10 +1,6 @@
 # Set scoreboard visibility
 
-scoreboard objectives setdisplay sidebar Info
-
-# Increment timer
-
-scoreboard players add timer game_data 1
+scoreboard objectives setdisplay sidebar game_data
 
 # Do hunger boost every 200 ticks / 10 seconds
 
@@ -44,11 +40,6 @@ scoreboard players operation Players_left Info = players_remaining game_data
 
 # Timings and circles
 
-# Untag all armour stands, tag island armour stands
-
-execute if score timer game_data matches 0 run function wafd:game_loop/untag_all_armor_stands
-execute if score timer game_data matches 0 run function wafd:game_loop/tag_island_armor_stands
-
 execute if score timer game_data matches 10 run function wafd:game_loop/title
 
 # Spawn and NML
@@ -61,9 +52,9 @@ execute if score timer game_data matches 100 run worldborder set 229 5
 
 execute if score timer game_data matches 150 run tellraw @a {"text":"Shoot the targets above for loot!","color":"green"}
 
-execute if score timer game_data matches 200 run tellraw @a {"text":"Spawn islands are now unavailable.","color":"aqua"}
+execute if score timer game_data matches 300 run tellraw @a {"text":"Spawn islands are now unavailable.","color":"aqua"}
 
-execute if score timer game_data matches 200..1200 run function wafd:potion_effect_rings/potion_nml_only
+execute if score timer game_data matches 300..1200 run function wafd:potion_effect_rings/potion_nml_only
 
 
 # NML + islands
@@ -140,7 +131,7 @@ execute if score timer game_data matches 6900 run tellraw @a {"text":"Wither eff
 
 # Untag lower floor, retag center upper floor
 
-execute if score timer game_data matches 7000 run function wafd:untag_all_armor_stands
+execute if score timer game_data matches 7000 run function wafd:game_loop/untag_all_armor_stands
 
 execute if score timer game_data matches 7000 run function wafd:game_loop/tag_center_uf_armor_stand
 
@@ -158,7 +149,7 @@ execute if score timer game_data matches 7200 run tellraw @a {"text":"Ring closi
 
 execute if score timer game_data matches 7200 run tellraw @a {"text":"Ring closing to 5 blocks!","color":"red"}
 
-worldborder set 5 5
+execute if score timer game_data matches 7200 run worldborder set 5 5
 
 # Warning Ring closing to 1
 
@@ -173,5 +164,9 @@ execute if score timer game_data matches 7700 run worldborder set 1 5
 # Reset worldborder
 
 execute if score timer game_data matches 8400 run worldborder set 300
+
+# Increment timer
+
+scoreboard players add timer game_data 1
 
 execute if score timer game_data matches 8400 run scoreboard players set game_state game_data 3
