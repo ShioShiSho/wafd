@@ -120,8 +120,11 @@ scoreboard players set game_state game_data 0
 
 # Untag armour stands
 
-function wafd:untag_all_armor_stands
+function wafd:game_loop/untag_all_armor_stands
 
+# Refill chests for good measaure
+
+function wafd:game_setup/refill_chests
 
 
 

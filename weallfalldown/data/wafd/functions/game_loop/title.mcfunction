@@ -1,0 +1,3 @@
+title @a times 0 20 20
+title @a subtitle {"text":"Be the last player standing!","color":"#00FFBA"}
+title @a title ["",{"text":"W","color":"#FF6600"},{"text":"e","color":"#FF5620"},{"text":" A","color":"#FF4532"},{"text":"ll","color":"#FF3241"},{"text":" F","color":"#FF1A50"},{"text":"a","color":"#F6006B"},{"text":"l","color":"#ED0079"},{"text":"l","color":"#E10086"},{"text":" D","color":"#D40092"},{"text":"o","color":"#C4009D"},{"text":"w","color":"#B118A7"},{"text":"n","color":"#9C27B0"}]

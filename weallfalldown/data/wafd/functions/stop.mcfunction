@@ -1,1 +1,2 @@
-gamemode spectator @a
+
+function wafd:secret/force_stop
