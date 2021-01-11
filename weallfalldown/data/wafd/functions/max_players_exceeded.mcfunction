@@ -1,0 +1,2 @@
+teleport @a 2 116 0
+tellraw @a ["",{"text":"Warning:","color":"red"},{"text":" Too many players detected in staging area - max players is "},{"text":"16","color":"green"},{"text":". "},{"text":"Lobby reset","color":"aqua"},{"text":"."}]

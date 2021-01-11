@@ -56,6 +56,8 @@ team join Green Ready
 scoreboard players add Not_ready Lobby 0
 team join Red Not_ready
 
+scoreboard players add #Active_players_copy Lobby 0
+
 scoreboard players add Minimum_to_start Lobby 2
 team join Yellow Minimum_to_start
 

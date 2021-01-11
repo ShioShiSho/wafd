@@ -44,6 +44,8 @@ function wafd:teleport_to_available_armor_stand
 
 tag @e[type=minecraft:armor_stand, x=-150, dx=300, y=70, dy=5, z=-150, dz=300] remove available_for_spawn
 
+# Give starting items
+
 execute as @a[scores={isPlaying=1}] run function wafd:give_starting_items
 
 # Refill chests
