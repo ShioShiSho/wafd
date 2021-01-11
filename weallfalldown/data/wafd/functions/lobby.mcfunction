@@ -16,13 +16,13 @@ execute store result score Ready Lobby run scoreboard players operation #Active_
 # Do teleports between lobby and staging
 
 # Teleport to staging if less than 16 players
-execute positioned -9 116 0 if score Active_players Lobby matches ..15 as @p[x=-8, dx=0.5, y=116, dy=2, z=0, dz=1, gamemode=adventure] run function wafd:accept_player
+execute positioned -9 116 0 if score Active_players Lobby matches ..15 as @p[x=-9, dx=0.5, y=116, dy=2, z=0, dz=1, gamemode=adventure] run function wafd:accept_player
 
 execute positioned -9 116 0 if score Active_players Lobby matches 16 as @p[x=-8, dx=0.5, y=116, dy=2, z=0, dz=1, gamemode=adventure] run function wafd:reject_player
 
 # Teleport from staging back to lower lobby when falling down centre block in staging
 
-execute as @a[x=0, dx=1, y=121, dy=0.5, z=0, dz=1, gamemode=adventure] run teleport -5 116 0
+execute as @a[x=0, dx=1, y=121, dy=0.5, z=0, dz=1, gamemode=adventure] run teleport @s 2 116 0 facing 7 117 0
 
 # Check if too many players:
 

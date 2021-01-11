@@ -13,6 +13,10 @@ execute if score hunger_timer game_data matches 950 run function wafd:refill_hun
 
 execute if score hunger_timer game_data matches 1000.. run scoreboard players set hunger_timer game_data 1
 
+# Force spectator gamemode for anyone not playing in adventure mode
+
+function wafd:force_spectator_gamemode
+
 # Track spawnpoints for participants
 
 execute as @a[scores={isPlaying=1}] run spawnpoint
@@ -21,9 +25,10 @@ execute as @a[scores={isPlaying=1}] run spawnpoint
 
 function wafd:death_victory_detect
 
-# Check for disconnects
+# Check for disconnects and combat loggers
 
 function wafd:check_disconnect
+function wafd:check_connect_during_game
 
 # Kill players beneath y=60
 
@@ -38,6 +43,13 @@ execute store result score players_remaining game_data if entity @e[scores={isPl
 scoreboard players operation Players_left Info = players_remaining game_data
 
 # Timings and circles
+
+# Untag all armour stands, tag island armour stands
+
+execute if score timer game_data matches 0 run function wafd:untag_all_armor_stands
+execute if score timer game_data matches 0 run function wafd:tag_island_armor_stands
+
+
 
 # Spawn and NML
 
@@ -74,6 +86,10 @@ execute if score timer game_data matches 2400 run tellraw @a {"text":"No man's l
 
 execute if score timer game_data matches 2400..4800 run function wafd:potion_islands_only
 
+# Tag Centre armour stands
+
+execute if score timer game_data matches 4800 run function wafd:tag_center_lf_armor_stands
+
 # Islands + centre
 
 execute if score timer game_data matches 4800 run tellraw @a {"text":"The centre island is now available!","color":"aqua"}
@@ -89,6 +105,12 @@ execute if score timer game_data matches 5400 run tellraw @a {"text":"Cutting of
 execute if score timer game_data matches 5700 run tellraw @a {"text":"Ring closing off Biome Islands!","color":"aqua"}
 
 execute if score timer game_data matches 5700 run worldborder set 180 15
+
+# Untag islands, retag center
+
+execute if score timer game_data matches 6000 run function wafd:untag_all_armor_stands
+
+execute if score timer game_data matches 6000 run function wafd:tag_center_lf_armor_stands
 
 # Centre island only
 
@@ -109,6 +131,12 @@ execute if score timer game_data matches 6500 run worldborder set 20 5
 # Wither warning on lower floor
 
 execute if score timer game_data matches 6900 run tellraw @a {"text":"Wither effect on ground floor in 5s","color":"aqua"}
+
+# Untag lower floor, retag center upper floor
+
+execute if score timer game_data matches 7000 run function wafd:untag_all_armor_stands
+
+execute if score timer game_data matches 7000 run function wafd:tag_center_uf_armor_stand
 
 # Wither on lower floor
 

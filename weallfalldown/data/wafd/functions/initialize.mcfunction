@@ -15,7 +15,7 @@ gamerule spawnRadius 0
 gamerule keepInventory false
 
 # spawnpoint
-
+setworldspawn 2 116 0
 spawnpoint @a 2 116 0
 teleport @a 2 116 0
 
@@ -103,14 +103,24 @@ scoreboard objectives remove hunger
 scoreboard objectives add hunger food
 scoreboard players reset @a hunger
 
-# Scoreboard for leaving game
+# Scoreboard for disconnecting
 
 scoreboard objectives remove leave_game
 scoreboard objectives add leave_game minecraft.custom:minecraft.leave_game
 
+# Scoreboard for players combat logging
+
+scoreboard objectives remove combat_log
+scoreboard objectives add combat_log dummy
+
+
 # Game game_state
 
 scoreboard players set game_state game_data 0
+
+# Untag armour stands
+
+function wafd:untag_all_armor_stands
 
 
 

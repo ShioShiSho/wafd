@@ -1,0 +1,1 @@
+execute positioned 0 86 0 run tag @e[type=minecraft:armor_stand, distance=45..90] add available_for_item_spawn

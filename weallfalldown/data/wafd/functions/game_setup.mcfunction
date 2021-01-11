@@ -10,6 +10,11 @@ scoreboard players set @a deaths 0
 time set 12000
 gamerule doDaylightCycle true
 
+# Reset leave_game, reset combat_log tag
+
+scoreboard players reset @a leave_game
+tag @a remove combat_log
+
 # Give instant_health
 
 effect give @a instant_health 5 5

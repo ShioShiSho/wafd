@@ -1,0 +1,1 @@
+tag @e[type=minecraft:armor_stand] remove available_for_item_spawn
