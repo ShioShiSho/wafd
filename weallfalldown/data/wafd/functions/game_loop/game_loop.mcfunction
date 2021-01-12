@@ -1,13 +1,13 @@
 # Set scoreboard visibility
 
-scoreboard objectives setdisplay sidebar game_data
+scoreboard objectives setdisplay sidebar Info
 
 # Do hunger boost every 200 ticks / 10 seconds
 
 scoreboard players add hunger_timer game_data 1
-execute if score hunger_timer game_data matches 975..999 run function wafd:game_loop/refill_hunger
+execute if score hunger_timer game_data matches 180..199 run function wafd:game_loop/refill_hunger
 
-execute if score hunger_timer game_data matches 1000.. run scoreboard players set hunger_timer game_data 1
+execute if score hunger_timer game_data matches 200.. run scoreboard players set hunger_timer game_data 1
 
 # Force spectator gamemode for anyone not playing in adventure mode
 

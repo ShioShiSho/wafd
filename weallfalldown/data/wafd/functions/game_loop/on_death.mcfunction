@@ -5,4 +5,4 @@ function wafd:game_loop/teleport_items
 
 function wafd:game_loop/create_firework
 
-scoreboard players set @s deaths 0
+scoreboard players set @s deaths 0 
